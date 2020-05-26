@@ -361,6 +361,9 @@ namespace CryptoNote
         {0xb1, 0x4c, 0x4a, 0x7c, 0xcf, 0x56, 0x57, 0x45, 0x65, 0xf9, 0x93, 0xa3, 0xb3, 0xc4, 0x43, 0xe3}};
 
     const char *const SEED_NODES[] = {
+	  "34.94.53.44:24497", //USASEEDNODE
+      "34.89.3.246:24497", //EUROPESEEDNODE
+      "34.87.165.129:24497", //ASIASEEDNODE
       "35.185.104.116:24497", //USASEEDNODE
       "35.236.125.196:24497", //USASEEDNODE
       "35.229.225.178:24497", //ASIASEEDNODE
