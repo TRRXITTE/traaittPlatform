@@ -43,6 +43,10 @@ You can always find the newest Release here: https://github.com/TRRXITTE/traaitt
 # Command Line Interface Wallet
 How to properly use traaittPlatform Cryptocurrency on Apple, Windows or Linux Machines.
 
+Official cmd Edition binaries for traaittPlatform: 
+https://github.com/traaittPlatform/traaittPlatform/releases
+
+
 1st step: synchronize traaittPlatformd
 ```
 traaittPlatform Application is used to synchronize the transaction history of your Wallet and
@@ -56,7 +60,6 @@ Open traaittPlatform Wallet to Receive, Send or simply view your current balance
 traaittPlatform [ETRX] addresses always start with iETRX.
 ```
 
-https://github.com/traaittPlatform/traaittPlatform/releases
 
 # How To Compile
 ## Build Optimization
