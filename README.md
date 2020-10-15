@@ -12,14 +12,15 @@ traaittPlatform is a fast, easy to use and private decentralized cryptocurrency 
 Official Website:
 https://traaittPlatform.com
 
-Explorer:
+Explorers:
+https://network.traaittPlatform.com
 https://explorer.traaittPlatform.com
 
 Mining Pool:
-https://supply.traaittPlatform.com
+https://traaittsupply.com
 
 Blockchain Cache API:
-https://blockapi.traaittPlatform.com
+https://cacheapi.traaittPlatform.com
 
 
 # Installing
