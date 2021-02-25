@@ -13,6 +13,7 @@ Official Website:
 https://traaittPlatform.com
 
 Explorers:
+https://traaittnetwork.com
 https://network.traaittPlatform.com
 https://explorer.traaittPlatform.com
 
@@ -27,9 +28,9 @@ https://cacheapi.traaittPlatform.com
 
 We offer binary images of the latest releases here: 
 
-https://github.com/traaittPlatform/traaittPlatform/releases
+https://github.com/TRRXITTE/traaittPlatform/releases
 
-https://github.com/traaittPlatform/traaittPlatformEnterprise/releases
+https://github.com/TRRXITTE/traaittPlatformEnterprise/releases
 
 
 # Graphical User Interface Wallet
