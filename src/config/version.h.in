@@ -2,8 +2,8 @@
 #define STR(x) STR_HELPER(x)
 
 #define PROJECT_NAME "traaittPlatform"
-#define PROJECT_SITE "https://www.traaittplatform.com"
-#define PROJECT_COPYRIGHT "Copyright 2020, traaittPlatform Team"
+#define PROJECT_SITE "https://www.traaittPlatform.com"
+#define PROJECT_COPYRIGHT "Copyright 2020 - TODAY, TRRXITTE Inc."
 #define APP_VER_MAJOR 4
 #define APP_VER_MINOR 4
 #define APP_VER_REV 7
