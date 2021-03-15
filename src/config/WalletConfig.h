@@ -28,17 +28,17 @@ namespace WalletConfig
     const std::string daemonName = "traaittPlatform";
 
     /* The name to call this wallet */
-    const std::string walletName = "traaittPlatform cmd Edition";
+    const std::string walletName = "cmdedition";
 
     /* The name of service/walletd, the programmatic rpc interface to a
        wallet */
-    const std::string walletdName = "traaitt-service";
+    const std::string walletdName = "ETRXservice";
 
     /* The full name of your crypto */
     const std::string coinName = std::string(CryptoNote::CRYPTONOTE_NAME);
 
     /* Where can your users contact you for support? */
-    const std::string contactLink = "http://contact.traaittplatform.com";
+    const std::string contactLink = "http://TRRXITTE.com";
 
     /* The number of decimals your coin has */
     const uint8_t numDecimalPlaces = CryptoNote::parameters::CRYPTONOTE_DISPLAY_DECIMAL_POINT;
