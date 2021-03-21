@@ -355,7 +355,7 @@ namespace CryptoNote
 
     const char LATEST_VERSION_URL[] = "http://latest.traaittPlatform.com";
 
-    const std::string LICENSE_URL = "https://github.com/traaittPlatform/traaittPlatform/blob/master/LICENSE";
+    const std::string LICENSE_URL = "https://github.com/TRRXITTE/traaittPlatform/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
         {0xb1, 0x4c, 0x4a, 0x7c, 0xcf, 0x56, 0x57, 0x45, 0x65, 0xf9, 0x93, 0xa3, 0xb3, 0xc4, 0x43, 0xe3}};
