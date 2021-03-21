@@ -1,4 +1,4 @@
-![image](https://github.com/TRRXITTE/traaittPlatform/blob/master/docs/ETRX.png)
+![image](https://github.com/TRRXITTE/traaittPlatform/blob/master/docs/etrx.png)
 #### traaittPlatform [ETRX] is a fast, and easy way to send money to friends and businesses
 
 ### Compiling traaittPlatform [ETRX]
