@@ -1,4 +1,4 @@
-![image](https://github.com/TRRXITTE/traaittPlatform/blob/master/docs/ETRX.png)
+![image](https://github.com/TRRXITTE/traaittPlatform/blob/master/docs/etrx.png)
 ![Download Count](https://img.shields.io/github/downloads/TRRXITTE/traaittplatform/total.svg)
 ![Version](https://img.shields.io/github/v/release/TRRXITTE/traaittplatform)
 #### Master Build Status
