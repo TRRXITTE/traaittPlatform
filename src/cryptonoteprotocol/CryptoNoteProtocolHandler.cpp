@@ -337,7 +337,7 @@ namespace CryptoNote
 
             std::stringstream ss;
 
-            ss << "Your " << CRYPTONOTE_NAME << " node is syncing with the network ";
+            ss << "Your " << CRYPTONOTE_NAME << " is syncing with the network ";
 
             /* We're behind the remote node */
             if (diff >= 0)
@@ -352,7 +352,7 @@ namespace CryptoNote
                 ss << "You are " << std::abs(diff) << " blocks (" << days << " days) ahead ";
             }
 
-            ss << "the current peer you're connected to. Slow and steady wins the race! ";
+            ss << "the current peer you're connected to.";
 
             auto logLevel = Logging::TRACE;
             /* Log at different levels depending upon if we're ahead, behind, and if it's
@@ -974,7 +974,7 @@ namespace CryptoNote
 
             context.m_state = CryptoNoteConnectionContext::state_normal;
             logger(Logging::INFO, Logging::BRIGHT_GREEN)
-                << context << "Successfully synchronized with the " << CryptoNote::CRYPTONOTE_NAME << " Network.";
+                << context << "Successfully synchronized with the " << CryptoNote::CRYPTONOTE_NAME << " network.";
             on_connection_synchronized();
         }
         return true;
