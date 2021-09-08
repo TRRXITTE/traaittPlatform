@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Turtlecoin Multi-installer
-# a one line clone-and-compile for turtlecoin:
+# traaittPlatform Multi-installer
+# a one line clone-and-compile for traaittPlatform:
 #
-#     ` $ curl -sL "https://raw.githubusercontent.com/turtlecoin/turtlecoin/master/scripts/multi_installer.sh" | bash
+#     ` $ curl -sL "https://raw.githubusercontent.com/trrxitte/traaittplatform/master/scripts/multi_installer.sh" | bash
 #
 # Supports Ubuntu 16.04 LTS, OSX 10.10+
 # Supports building project from current directory (automatic detection)
@@ -41,26 +41,25 @@ _set_wd() {
         _note "Building project from current working directory ($PWD)"
     else
         _note "Cloning project with git..."
-        if [ -d "$PWD"/turtlecoin ]; then
-            read -r -p "${1:-turtlecoin directory already exists. Overwrite? [y/N]} " response
+        if [ -d "$PWD"/traaittPlatform ]; then
+            read -r -p "${1:-traaittPlatform directory already exists. Overwrite? [y/N]} " response
             case "$response" in
                 [yY][eE][sS|[yY])
-                    _colorize red "Overwriting old turtlecoin directory" && echo
-                    rm -rf "$PWD"/turtlecoin
+                    _colorize red "Overwriting old traaittPlatform directory" && echo
+                    rm -rf "$PWD"/traaittPlatform
                     ;;
                 *)
-                    _fail "turtlecoin directory already exists. Aborting..."
+                    _fail "traaittPlatform directory already exists. Aborting..."
                     ;;
             esac
         fi
-        mkdir turtlecoin
-        git clone -b master -q https://github.com/turtlecoin/turtlecoin turtlecoin   >>build.log 2>&1 || _fail "Unable to clone git repository. Please see build.log for more information"
-        cd turtlecoin
+        git clone -b master --single-branch https://github.com/trrxitte/traaittplatform traaittPlatform   >>build.log 2>&1 || _fail "Unable to clone git repository. Please see build.log for more information"
+        cd traaittPlatform
     fi
 }
 
-_build_turtlecoin() {
-    _note "Building turtlecoin from source (this might take a while)..."
+_build_traaittplatform() {
+    _note "Building traaittPlatform from source (this might take a while)..."
     if [ -d build ]; then
         _colorize red "Overwriting old build directory" && echo
         rm -rf build
@@ -109,7 +108,7 @@ _configure_linux() {
     elif [ "$(awk -F= '/^NAME/{print $2}' /etc/os-release)" = "\"Debian GNU/Linux\"" ]; then
         _configure_debian
     else
-        _fail "Your OS version isn't supported by this installer. Please consider adding support for your OS to the project ('https://github.com/turtlecoin')"
+        _fail "Your OS version isn't supported by this installer. Please consider adding support for your OS to the project ('https://github.com/trrxitte')"
     fi
 }
 
@@ -138,19 +137,19 @@ _configure_os() {
             _configure_osx
             ;;
         *)
-            _fail "This installer only runs on OSX 10.10+ and Ubuntu 16.04+. Please consider adding support for your OS to the project ('https://github.com/turtlecoin')"
+            _fail "This installer only runs on OSX 10.10+ and Ubuntu 16.04+. Please consider adding support for your OS to the project ('https://github.com/trrxitte')"
             ;;
     esac
     _note "Operating system configuration completed. You're halfway there!"
 }
 
-_note "Turtlecoin Multi_Installer v1.0 (pepperoni)"
-_colorize green " _______         _   _       _____      _       \n|__   __|       | | | |     / ____|    (_)      \n   | |_   _ _ __| |_| | ___| |     ___  _ _ __  \n   | | | | | '__| __| |/ _ \ |    / _ \| | '_ \ \n   | | |_| | |  | |_| |  __/ |___| (_) | | | | |\n   |_|\__,_|_|   \__|_|\___|\_____\___/|_|_| |_|\n" && echo
+_note "traaittPlatform Multi_Installer v1.0"
+_colorize green "Apple M1 support" && echo
 
 _configure_os
 
 _set_wd
-_build_turtlecoin
+_build_traaittplatform
 
 _note "Installation complete!"
-_note "Look in 'turtlecoin/build/src/' for the executible binaries. See 'https://github.com/turtlecoin/turtlecoin' for more project support. Cowabunga!"
+_note "Look in 'traaittPlatform/build/src/' for the executible binaries. See 'https://github.com/trrxitte/traaittPlatform' for more project support. Cowabunga!"
