@@ -1,5 +1,5 @@
 // Copyright (c) 2019, The TurtleCoin Developers
-// Copyright (c) 2020, The traaittPlatform Developers
+// Copyright (c) 2020, TRRXITTE Int., incorporated
 
 #pragma once
 
