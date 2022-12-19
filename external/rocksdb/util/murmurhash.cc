@@ -128,7 +128,7 @@ unsigned int MurmurHash2 ( const void * key, int len, unsigned int seed )
     };
 
     // Do a few final mixes of the hash to ensure the last few
-    // bytes are well-incorporated.
+    // bytes are well-incorporate.
 
     h ^= h >> 13;
     h *= m;
