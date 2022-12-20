@@ -67,7 +67,7 @@ traaittPlatform [ETRX] addresses always start with iETRX.
 
 # Copyright Section
 ```
-// Copyright (c) 2020-TODAY TRRXITTE Int., incorporate
+// Copyright (c) 2020-TODAY TRRXITTE Int., incorporated
 // Copyright (c) 2018-2019, The TurtleCoin Developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2012-2017, The CryptoNote developers

@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
-// Copyright (c) 2020, TRRXITTE Int., incorporate
+// Copyright (c) 2020, TRRXITTE Int., incorporated
 //
 // Please see the included LICENSE file for more information.
 
@@ -19,9 +19,13 @@ namespace CryptoNote
 {
     namespace parameters
     {
-        const uint64_t DIFFICULTY_TARGET = 32; // seconds
+        const uint64_t DIFFICULTY_TARGET = 644; // seconds
+
+        const uint64_t DIFFICULTY_TARGET_V2 = 447; // seconds
 
         /* The heights to activate the mixin limits at */
+
+        const uint64_t DIFFICULTY_TARGET_V2_HEIGHT = 47000;
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500000000;
 
@@ -236,14 +240,13 @@ namespace CryptoNote
         /* Block heights we are going to have hard forks at */
                 const uint64_t FORK_HEIGHTS[] = {
                     1, // 1
-                    132000, // 2
-                    2300000, // 3
-                    7600000, // 4
-                    16000000, // 5
+                    2300000, // 2
+                    7600000, // 3
+                    16000000, // 4
                 };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
-        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX = 2;
+        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX = 1;
 
         const uint64_t FORK_HEIGHTS_SIZE = sizeof(FORK_HEIGHTS) / sizeof(*FORK_HEIGHTS);
 
@@ -308,7 +311,7 @@ namespace CryptoNote
 
     const int RPC_DEFAULT_PORT = 24496;
 
-    const int SERVICE_DEFAULT_PORT = 8070;
+    const int SERVICE_DEFAULT_PORT = 8447;
 
     const size_t P2P_LOCAL_WHITE_PEERLIST_LIMIT = 1000;
 
