@@ -21,11 +21,11 @@ namespace CryptoNote
     {
         const uint64_t DIFFICULTY_TARGET = 644; // seconds
 
-        const uint64_t DIFFICULTY_TARGET_V2 = 447; // seconds
+        const uint64_t DIFFICULTY_TARGET_V2 = 32; // seconds
 
         /* The heights to activate the mixin limits at */
 
-        const uint64_t DIFFICULTY_TARGET_V2_HEIGHT = 47000;
+        const uint64_t DIFFICULTY_TARGET_V2_HEIGHT = 134000;
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500000000;
 
