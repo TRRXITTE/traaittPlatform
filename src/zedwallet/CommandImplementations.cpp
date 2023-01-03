@@ -265,7 +265,12 @@ void printHashrate(uint64_t difficulty)
     }
 
     /* Hashrate is difficulty divided by block target time */
-    uint32_t hashrate = static_cast<uint32_t>(round(difficulty / CryptoNote::parameters::DIFFICULTY_TARGET));
+    uint32_t hashrate;
+    if (height >= DIFFICULTY_TARGET_V2_HEIGHT) {
+      hashrate = static_cast<uint32_t>(round(difficulty / DIFFICULTY_TARGET_V2));
+    } else {
+      hashrate = static_cast<uint32_t>(round(difficulty / CryptoNote::parameters::DIFFICULTY_TARGET));
+    }
 
     std::cout << "Network hashrate: " << SuccessMsg(Utilities::get_mining_speed(hashrate))
               << " (Based on the last local block)" << std::endl;

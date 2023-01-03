@@ -10,9 +10,17 @@
 // LWMA-2 difficulty algorithm
 // Copyright (c) 2017-2018 Zawy, MIT License
 // https://github.com/zawy12/difficulty-algorithms/issues/3
-uint64_t nextDifficultyV5(std::vector<uint64_t> timestamps, std::vector<uint64_t> cumulativeDifficulties)
+uint64_t nextDifficultyV5(std::vector<uint64_t> timestamps, std::vector<uint64_t> cumulativeDifficulties, uint64_t currentBlockHeight)
 {
-    int64_t T = CryptoNote::parameters::DIFFICULTY_TARGET;
+        int64_t T;
+    if (currentBlockHeight >= CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT)
+    {
+        T = CryptoNote::parameters::DIFFICULTY_TARGET_V2;
+    }
+    else
+    {
+        T = CryptoNote::parameters::DIFFICULTY_TARGET;
+    }
     int64_t N = CryptoNote::parameters::DIFFICULTY_WINDOW_V3;
     int64_t L(0), ST, sum_3_ST(0), next_D, prev_D;
 
@@ -56,9 +64,17 @@ uint64_t nextDifficultyV5(std::vector<uint64_t> timestamps, std::vector<uint64_t
 // LWMA-2 difficulty algorithm
 // Copyright (c) 2017-2018 Zawy, MIT License
 // https://github.com/zawy12/difficulty-algorithms/issues/3
-uint64_t nextDifficultyV4(std::vector<uint64_t> timestamps, std::vector<uint64_t> cumulativeDifficulties)
+uint64_t nextDifficultyV4(std::vector<uint64_t> timestamps, std::vector<uint64_t> cumulativeDifficulties, uint64_t currentBlockHeight)
 {
-    int64_t T = CryptoNote::parameters::DIFFICULTY_TARGET;
+        int64_t T;
+    if (currentBlockHeight >= CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT)
+    {
+        T = CryptoNote::parameters::DIFFICULTY_TARGET_V2;
+    }
+    else
+    {
+        T = CryptoNote::parameters::DIFFICULTY_TARGET;
+    }
     int64_t N = CryptoNote::parameters::DIFFICULTY_WINDOW_V3;
     int64_t L(0), ST, sum_3_ST(0), next_D, prev_D;
 
@@ -97,9 +113,17 @@ uint64_t nextDifficultyV4(std::vector<uint64_t> timestamps, std::vector<uint64_t
 // LWMA-2 difficulty algorithm
 // Copyright (c) 2017-2018 Zawy, MIT License
 // https://github.com/zawy12/difficulty-algorithms/issues/3
-uint64_t nextDifficultyV3(std::vector<uint64_t> timestamps, std::vector<uint64_t> cumulativeDifficulties)
+uint64_t nextDifficultyV3(std::vector<uint64_t> timestamps, std::vector<uint64_t> cumulativeDifficulties, uint64_t currentBlockHeight)
 {
-    int64_t T = CryptoNote::parameters::DIFFICULTY_TARGET;
+        int64_t T;
+    if (currentBlockHeight >= CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT)
+    {
+        T = CryptoNote::parameters::DIFFICULTY_TARGET_V2;
+    }
+    else
+    {
+        T = CryptoNote::parameters::DIFFICULTY_TARGET;
+    }
     int64_t N = CryptoNote::parameters::DIFFICULTY_WINDOW_V3;
     int64_t FTL = CryptoNote::parameters::CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3;
     int64_t L(0), ST, sum_3_ST(0), next_D, prev_D;

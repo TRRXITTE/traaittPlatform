@@ -833,7 +833,11 @@ namespace CryptoNote
         mininumFee(parameters::MINIMUM_FEE);
         defaultDustThreshold(parameters::DEFAULT_DUST_THRESHOLD);
 
-        difficultyTarget(parameters::DIFFICULTY_TARGET);
+        if (blockHeight >= parameters::DIFFICULTY_TARGET_V2_HEIGHT) {
+            difficultyTarget(parameters::DIFFICULTY_TARGET_V2);
+        } else {
+            difficultyTarget(parameters::DIFFICULTY_TARGET);
+        }
         difficultyWindow(parameters::DIFFICULTY_WINDOW);
         difficultyLag(parameters::DIFFICULTY_LAG);
         difficultyCut(parameters::DIFFICULTY_CUT);

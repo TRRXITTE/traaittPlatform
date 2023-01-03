@@ -132,9 +132,20 @@ namespace Utilities
         }
 
         /* Get the amount of seconds since the blockchain launched */
-        uint64_t secondsSinceLaunch = scanHeight * CryptoNote::parameters::DIFFICULTY_TARGET;
+        uint64_t secondsSinceLaunch;
+            if (scanHeight >= DIFFICULTY_TARGET_V2_HEIGHT) {
+             secondsSinceLaunch = scanHeight * DIFFICULTY_TARGET_V2;
+        } else {
+             secondsSinceLaunch = scanHeight * CryptoNote::parameters::DIFFICULTY_TARGET;
+        }
 
-        /* Get the genesis block timestamp and add the time since launch */
+          /* Adjust the timestamp to account for the change in difficulty */
+    if (scanHeight >= DIFFICULTY_TARGET_V2_HEIGHT) {
+        uint64_t difficultyAdjustment = (CryptoNote::parameters::DIFFICULTY_TARGET / DIFFICULTY_TARGET_V2) * (scanHeight - DIFFICULTY_TARGET_V2_HEIGHT);
+        secondsSinceLaunch += difficultyAdjustment;
+    }
+
+     /* Get the genesis block timestamp and add the time since launch */
         uint64_t timestamp = CryptoNote::parameters::GENESIS_BLOCK_TIMESTAMP + secondsSinceLaunch;
 
         /* Don't make timestamp too large or daemon throws an error */

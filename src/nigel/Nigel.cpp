@@ -217,7 +217,10 @@ bool Nigel::getDaemonInfo()
             m_peerCount =
                 j.at("incoming_connections_count").get<uint64_t>() + j.at("outgoing_connections_count").get<uint64_t>();
 
-            m_lastKnownHashrate = j.at("difficulty").get<uint64_t>() / CryptoNote::parameters::DIFFICULTY_TARGET;
+            uint64_t difficultyTarget = CryptoNote::parameters::DIFFICULTY_TARGET;
+            if (m_localDaemonBlockCount >= CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT) {
+             difficultyTarget = CryptoNote::parameters::DIFFICULTY_TARGET_V2;
+            }
 
             /* Look to see if the isCacheApi property exists in the response
                and if so, set the internal value to whatever it found */
