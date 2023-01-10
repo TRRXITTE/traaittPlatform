@@ -256,7 +256,7 @@ void printPeerCount(size_t peerCount)
     std::cout << "Peers: " << SuccessMsg(std::to_string(peerCount)) << std::endl;
 }
 
-void printHashrate(uint64_t difficulty)
+void printHashrate(uint64_t difficulty, CryptoNote::INode &node)
 {
     /* Offline node / not responding */
     if (difficulty == 0)
@@ -264,10 +264,13 @@ void printHashrate(uint64_t difficulty)
         return;
     }
 
+    /* Get the last local block height from the node */
+    uint32_t latestHeight = node.getLastKnownBlockHeight();
+
     /* Hashrate is difficulty divided by block target time */
     uint32_t hashrate;
-    if (height >= DIFFICULTY_TARGET_V2_HEIGHT) {
-      hashrate = static_cast<uint32_t>(round(difficulty / DIFFICULTY_TARGET_V2));
+    if (latestHeight >= CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT) {
+      hashrate = static_cast<uint32_t>(round(difficulty / CryptoNote::parameters::DIFFICULTY_TARGET_V2));
     } else {
       hashrate = static_cast<uint32_t>(round(difficulty / CryptoNote::parameters::DIFFICULTY_TARGET));
     }
