@@ -133,15 +133,15 @@ namespace Utilities
 
         /* Get the amount of seconds since the blockchain launched */
         uint64_t secondsSinceLaunch;
-            if (scanHeight >= DIFFICULTY_TARGET_V2_HEIGHT) {
-             secondsSinceLaunch = scanHeight * DIFFICULTY_TARGET_V2;
+            if (scanHeight >= CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT) {
+             secondsSinceLaunch = scanHeight * CryptoNote::parameters::DIFFICULTY_TARGET_V2;
         } else {
              secondsSinceLaunch = scanHeight * CryptoNote::parameters::DIFFICULTY_TARGET;
         }
 
           /* Adjust the timestamp to account for the change in difficulty */
-    if (scanHeight >= DIFFICULTY_TARGET_V2_HEIGHT) {
-        uint64_t difficultyAdjustment = (CryptoNote::parameters::DIFFICULTY_TARGET / DIFFICULTY_TARGET_V2) * (scanHeight - DIFFICULTY_TARGET_V2_HEIGHT);
+    if (scanHeight >= CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT) {
+        uint64_t difficultyAdjustment = (CryptoNote::parameters::DIFFICULTY_TARGET / CryptoNote::parameters::DIFFICULTY_TARGET_V2) * (scanHeight - CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT);
         secondsSinceLaunch += difficultyAdjustment;
     }
 
