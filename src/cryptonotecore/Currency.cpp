@@ -832,7 +832,7 @@ namespace CryptoNote
 
         mininumFee(parameters::MINIMUM_FEE);
         defaultDustThreshold(parameters::DEFAULT_DUST_THRESHOLD);
-
+        uint64_t blockHeight = parameters::CRYPTONOTE_MAX_BLOCK_NUMBER;
         if (blockHeight >= parameters::DIFFICULTY_TARGET_V2_HEIGHT) {
             difficultyTarget(parameters::DIFFICULTY_TARGET_V2);
         } else {
