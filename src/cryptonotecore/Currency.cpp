@@ -520,22 +520,21 @@ namespace CryptoNote
     {
         if (blockIndex >= CryptoNote::parameters::LWMA_2_DIFFICULTY_BLOCK_INDEX_V3)
         {
-            return nextDifficultyV5(timestamps, cumulativeDifficulties);
+            return nextDifficultyV5(timestamps, cumulativeDifficulties, blockIndex);
         }
         else if (blockIndex >= CryptoNote::parameters::LWMA_2_DIFFICULTY_BLOCK_INDEX_V2)
         {
-            return nextDifficultyV4(timestamps, cumulativeDifficulties);
+            return nextDifficultyV4(timestamps, cumulativeDifficulties, blockIndex);
         }
         else if (blockIndex >= CryptoNote::parameters::LWMA_2_DIFFICULTY_BLOCK_INDEX)
         {
-            return nextDifficultyV3(timestamps, cumulativeDifficulties);
+            return nextDifficultyV3(timestamps, cumulativeDifficulties, blockIndex);
         }
         else
         {
             return nextDifficulty(version, blockIndex, timestamps, cumulativeDifficulties);
         }
     }
-
     uint64_t Currency::nextDifficulty(
         uint8_t version,
         uint32_t blockIndex,
