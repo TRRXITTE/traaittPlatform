@@ -1415,9 +1415,9 @@ namespace CryptoNote
         /* Get the amount of seconds since the blockchain launched */
 
         uint64_t secondsSinceLaunch;
-        if (scanHeight >= DIFFICULTY_TARGET_V2_HEIGHT) {
+        if (scanHeight >= CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT) {
         /* Adjust the seconds since launch to account for the change in difficulty */
-        uint64_t difficultyAdjustment = (CryptoNote::parameters::DIFFICULTY_TARGET / DIFFICULTY_TARGET_V2) * (scanHeight - DIFFICULTY_TARGET_V2_HEIGHT);
+        uint64_t difficultyAdjustment = (CryptoNote::parameters::DIFFICULTY_TARGET / CryptoNote::parameters::DIFFICULTY_TARGET_V2) * (scanHeight - DIFFICULTY_TARGET_V2_HEIGHT);
           secondsSinceLaunch = scanHeight * DIFFICULTY_TARGET_V2 + difficultyAdjustment;
         } else {
         secondsSinceLaunch = scanHeight * CryptoNote::parameters::DIFFICULTY_TARGET;
