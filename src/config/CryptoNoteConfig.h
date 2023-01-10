@@ -358,7 +358,7 @@ namespace CryptoNote
         {0xb4, 0x4c, 0x4a, 0x7c, 0xcf, 0x56, 0x57, 0x45, 0x65, 0xf9, 0x93, 0xa3, 0xb3, 0xc4, 0x43, 0xe3}};
 
     const char *const SEED_NODES[] = {
-	  "34.94.53.44:24411", //PRIMARY SET
-      "34.87.165.129:24411" //
+	  "34.173.255.181:24411", //PRIMARY SET
+      "34.134.15.101:24411" //
     };
 } // namespace CryptoNote
