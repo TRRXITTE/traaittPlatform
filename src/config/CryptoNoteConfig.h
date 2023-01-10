@@ -25,7 +25,7 @@ namespace CryptoNote
 
         /* The heights to activate the mixin limits at */
 
-        const uint64_t DIFFICULTY_TARGET_V2_HEIGHT = 134000;
+        const uint64_t DIFFICULTY_TARGET_V2_HEIGHT = 3200;
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500000000;
 
@@ -307,11 +307,11 @@ namespace CryptoNote
     const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT = 100; // by default, blocks count in blocks downloading
     const size_t COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT = 1000;
 
-    const int P2P_DEFAULT_PORT = 24497;
+    const int P2P_DEFAULT_PORT = 24411;
 
-    const int RPC_DEFAULT_PORT = 24496;
+    const int RPC_DEFAULT_PORT = 24410;
 
-    const int SERVICE_DEFAULT_PORT = 8447;
+    const int SERVICE_DEFAULT_PORT = 8440;
 
     const size_t P2P_LOCAL_WHITE_PEERLIST_LIMIT = 1000;
 
@@ -355,19 +355,10 @@ namespace CryptoNote
     const std::string LICENSE_URL = "https://github.com/TRRXITTE/traaittPlatform/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
-        {0xb1, 0x4c, 0x4a, 0x7c, 0xcf, 0x56, 0x57, 0x45, 0x65, 0xf9, 0x93, 0xa3, 0xb3, 0xc4, 0x43, 0xe3}};
+        {0xb4, 0x4c, 0x4a, 0x7c, 0xcf, 0x56, 0x57, 0x45, 0x65, 0xf9, 0x93, 0xa3, 0xb3, 0xc4, 0x43, 0xe3}};
 
     const char *const SEED_NODES[] = {
-	  "34.94.53.44:24497", //PRIMARY SET
-      "34.87.165.129:24497", //
-      "34.89.3.246:24497", //
-      "35.241.111.255:24497", //ETRX WORLDWIDE
-      "34.64.172.203:24497", //ETRX WORLDWIDE
-      "34.87.112.219:24497", //ETRX WORLDWIDE
-      "35.246.10.246:24497", //ETRX WORLDWIDE
-	  "34.107.123.203:24497", //ETRX WORLDWIDE
-      "34.95.173.217:24497", //ETRX WORLDWIDE
-      "34.86.103.64:24497", //ETRX WORLDWIDE
-      "34.106.203.152:24497" //ETRX WORLDWIDE
+	  "34.94.53.44:24411", //PRIMARY SET
+      "34.87.165.129:24411" //
     };
 } // namespace CryptoNote
