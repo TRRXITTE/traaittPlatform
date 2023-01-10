@@ -774,6 +774,8 @@ namespace CryptoNote
         res.supported_height = CryptoNote::parameters::FORK_HEIGHTS_SIZE == 0
                                    ? 0
                                    : CryptoNote::parameters::FORK_HEIGHTS[CryptoNote::parameters::CURRENT_FORK_INDEX];
+                                   // Define currentBlockHeight
+                               uint64_t currentBlockHeight = m_core.getTopBlockIndex() + 1;
                                    if (currentBlockHeight >= CryptoNote::parameters::DIFFICULTY_TARGET_V2_HEIGHT) {
         res.hashrate = (uint32_t)round(res.difficulty / CryptoNote::parameters::DIFFICULTY_TARGET_V2);
         } else {
