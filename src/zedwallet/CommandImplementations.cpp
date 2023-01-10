@@ -299,7 +299,7 @@ void status(CryptoNote::INode &node, CryptoNote::WalletGreen &wallet)
     std::cout << std::endl;
 
     /* Print the network hashrate, based on the last local block */
-    printHashrate(node.getLastLocalBlockHeaderInfo().difficulty);
+    printHashrate(node.getLastLocalBlockHeaderInfo().difficulty, node);
 
     /* Print the amount of peers we have */
     printPeerCount(node.getPeerCount());
