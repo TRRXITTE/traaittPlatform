@@ -6,7 +6,7 @@
 
 # traaittPlatform [ETRX]
 
-traaittPlatform is a fast, easy to use and private decentralized cryptocurrency combined with a powerful ecosystem and an eco-friendly mining algorithm.
+traaittPlatform is a easy to use and private decentralized cryptocurrency combined with a powerful ecosystem and an eco-friendly mining algorithm.
 
 TRRXITTE Int., incorporate:  
 https://TRRXITTE.com
