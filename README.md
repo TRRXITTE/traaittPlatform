@@ -8,19 +8,19 @@
 
 traaittPlatform is a fast, easy to use and private decentralized cryptocurrency combined with a powerful ecosystem and an eco-friendly mining algorithm.
 
-TRRXITTE Int., incorporate:
+TRRXITTE Int., incorporate:  
 https://TRRXITTE.com
 
-Official Website:
+Official Website:  
 https://traaittPlatform.com
 
-Explorers:
-https://traaittnetwork.com
+Explorers:  
+https://network.traaittplatform.com  
 
-Mining Pool:
-https://traaittsupply.com
+Mining Pool:  
+https://github.com/TRRXITTE/traaittPlatform
 
-Blockchain Cache API:
+Blockchain Cache API:[after update]  
 https://cacheapi.traaittPlatform.com
 
 
@@ -34,7 +34,7 @@ https://github.com/TRRXITTE/traaittPlatformEnterprise/releases
 
 
 # Graphical User Interface Wallet
-GUI traaittPlatform Cryptocurrency Wallet on Apple, Windows or Linux Machines.
+traaittPlatform cryptocurrency wallet on Apple, Windows or Linux Machines.
 
 traaittPlatform Enterprise:
 
@@ -67,7 +67,7 @@ traaittPlatform [ETRX] addresses always start with iETRX.
 
 # Copyright Section
 ```
-// Copyright (c) 2020-TODAY TRRXITTE Int., incorporated
+// Copyright (c) 2020-TODAY TRRXITTE Int., incorporate
 // Copyright (c) 2018-2019, The TurtleCoin Developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2012-2017, The CryptoNote developers
