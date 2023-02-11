@@ -27,11 +27,7 @@ namespace CryptoNote
 
         const uint64_t DIFFICULTY_TARGET_V2_HEIGHT = 135500;
 
-<<<<<<< Updated upstream
-        const uint64_t DIFFICULTY_TARGET_V2_HEIGHT = 134000;
-=======
         /* The heights to activate the mixin limits at */
->>>>>>> Stashed changes
 
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER = 500000000;
 
